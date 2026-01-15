@@ -1,0 +1,145 @@
+\documentclass[a4paper,12pt,oneside]{article}
+
+\input{config.tex}
+
+\title{PEC2 Cálculo}
+\author{José Antonio González Morente}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+% $$\begin{vmatrix}
+% a & b \\
+% c & d
+% \end{vmatrix}$$
+
+\begin{proof}[Ejercicio 1]
+
+$$f(x)=\begin{cases}
+    \dfrac{x+1}{x-1} & x\le 0 \\
+    \sen(\pi x) & x>0
+\end{cases}$$
+
+Para $x\leq 0$, la función es racional y continua en todo su dominio. El único punto que podría dar problemas es $x=1$ pero no pertenece a $x\leq 0$.
+
+Para $x>0$, $\sin(\pi x)$ es continua para todo $x\in\RR$.
+
+Por lo que no hay problemas de continuidad dentro de cada tramo.
+
+En el punto de unión $x=0$, calculamos los límites laterales y el valor de la función:
+$$f(0)=-1$$
+
+Límite por la izquieda:
+$$\lim_{x\to 0^-}\frac{x+1}{x-1}=-1$$
+
+Límite por la derecha:
+$$\lim_{x\to 0^+}\sen(\pi x)=\sen(0)=0$$
+
+Como estos límites laterales no coinciden, la función no es continua en $x=0$.
+
+La correcta es la (a).
+
+
+\end{proof}
+
+\begin{proof}[Ejercicio 2]
+    \begin{equation*}
+        \begin{split}
+        \lim_{x\to 0}\frac{e^x(xe^x+2x^2+1-e^x)}{(e^x -1)^3}
+        \end{split}
+    \end{equation*}
+
+    Al sustituir $x=0$ obtenemos una indeterminación de tipo $\dfrac{0}{0}$, en este caso podemos aplicar la regla de L'Hopital, ya que satisface las hipótesis del teorema (indeterminación, derivabilidad de las funciones con derivada no nula del denominador en un entorno del punto excepto el punto).
+
+    Sea $f(x)=e^x(xe^x+2x^2+1-e^x)$ y $g(x)=(e^x -1)^3$. Entonces
+    $$f(x)=xe^{2x}+2e^xx^2+e^x-e^{2x}$$
+    \begin{equation*}
+        \begin{split}
+            f'(x) & = e^{2x}+2xe^{2x}+2e^xx^2+2e^x(2x)+e^x-2e^{2x} \\
+                  & =-e^{2x}+2xe^{2x}+2x^2e^x+4xe^x+e^x
+        \end{split}
+    \end{equation*}
+        \begin{equation*}
+        \begin{split}
+            g'(x) & = 3(e^x-1)^2e^x
+        \end{split}
+    \end{equation*}
+    Dado que $f'(0)=g'(0)=0$ volvemos a aplicar la regla de L'Hopital
+    \begin{equation*}
+        \begin{split}
+            f''(x) & = -2e^{2x}+2e^{2x}+4xe^{2x}+4xe^x+2x^2e^x+4e^x+4xe^x+e^x \\
+                   & = 4xe^{2x}+8xe^x+2x^2e^x+5e^x
+        \end{split}
+    \end{equation*}
+    Por otro lado,
+    \begin{equation*}
+        \begin{split}
+            g''(x) & = 3\left[2(e^x-1)e^{2x}+(e^x-1)^2e^x\right]
+        \end{split}
+    \end{equation*}
+
+    Ahora observemos que $f''(0)=5$ y $g''(0)=0$. Por lo que,
+    $$\lim_{x\to 0^+}\frac{f''(x)}{g''(x)}=+\infty, \qquad \lim_{x\to 0^-}\frac{f''(x)}{g''(x)}=-\infty$$
+
+    El límite por tanto no existe. La correcta es la (b).
+
+\end{proof}
+
+\begin{proof}[Ejercicio 3]
+
+    La integral la podemos ver como composición de dos funciones $g(x)=x^2$ y
+    $$h(x)=\int_0^x\frac{1}{1+s^4}ds$$
+
+    Es decir, $$f(x)=(h\circ g)(x)$$
+
+    Aplicamos la regla de la cadena y el TFC:
+    $$f'(1)=h'(g(1))g'(1)=\frac{1}{1+1^4}2=1$$
+    La correcta es la (d).
+
+\end{proof}
+
+\begin{proof}[Ejercicio 4] \ \\
+    Primero comprobamos que el punto pertenece a la gráfica:
+    $$f(1,1)=2$$
+    así que $(1,1,2)$ pertenece al grafo.
+
+    Calculamos las derivadas parciales
+    $$D_1(x,y)=2x, \quad D_2(x,y)=1$$
+    En $(1,1)$:
+    $$D_1(1,1)=2, \quad D_2(1,1)=1$$
+    La ecuación del plano tangente es:
+    $$z = 2 + 2(x-1) + 1(y-1)$$
+    La correcta es la (b).
+\end{proof}
+
+\begin{proof}[Ejercicio 5]
+    $$D=\{(x,y) : x\geq 0, \ y\geq 0, \ x+y\leq 1\}$$
+    $$I=\int_Df(x-y,x+y)dxdy$$
+    Hacemos el cambio:
+    $$u=x+y \qquad v=x-y$$
+    Expresamos $x$ e $y$ en función de $u$ y $v$
+    $$x=\frac{u+v}{2}, \qquad y=\frac{u-v}{2}$$
+    La función del cambio es por tanto $$s(u,v)=\left(\frac{u+v}{2}, \frac{u-v}{2}\right)$$
+    El Jacobiano es
+    $$\begin{vmatrix}
+    \frac{1}{2} & \frac{1}{2} \\
+    \frac{1}{2} & -\frac{1}{2}
+\end{vmatrix}=\frac{1}{2}$$
+    Veamos como calcular la región transformada:
+
+    De $x\geq 0$ se obtiene $\frac{u+v}{2}\geq 0$ luego $v\geq -u$.
+
+    De $y\geq 0$ se obtiene $\frac{u-v}{2}\geq 0$ leugo $v\leq u$.
+
+    Y $x+y\leq 1$ luego $u\leq 1$, además $u\geq 0$.
+
+    Por tanto,
+    $$0\leq u\leq 1, \qquad -u\leq v\leq u$$
+
+    Aplicamos el teorema del cambio de variable
+    $$I=\int_0^1\int_{-u}^uf(v,u)\frac{1}{2}dvdu=\frac{1}{2}\int_0^1\int_{-u}^uf(v,u)dvdu$$
+    La correcta es la (d).
+
+\end{proof}
+\end{document}
