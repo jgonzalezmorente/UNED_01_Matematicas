@@ -1,0 +1,202 @@
+{
+	"Matrix": {
+		"prefix": "mtx",
+		"body": [
+			"\\begin{pmatrix}",
+			"\t$1",
+			"\\end{pmatrix}"
+		],
+		"description": "Matriz pmatrix"
+	},
+	"Determinant": {
+		"prefix": "vdet",
+		"body": [
+			"\\begin{vmatrix}",
+			"\t$1",
+			"\\end{vmatrix}"
+		],
+		"description": "Determinante"
+	},
+	"Aligned": {
+		"prefix": "alg",
+		"body": [
+			"$$",
+			"\\begin{aligned}",
+			"\t$1",
+			"\\end{aligned}",
+			"$$"
+		],
+		"description": "Entorno aligned (ecuaciones alineadas)"
+	},
+	"Mathbb": {
+		"prefix": "bb",
+		"body": [
+			"\\mathbb{$1}"
+		],
+		"description": "Conjunto numérico (mathbb)"
+	},
+	"Frac": {
+		"prefix": "fr",
+		"body": [
+			"\\frac{$1}{$2}"
+		],
+		"description": "Fracción estándar (frac)"
+	},
+	"DFrac": {
+		"prefix": "dfr",
+		"body": [
+			"\\dfrac{$1}{$2}"
+		],
+		"description": "Fracción display (dfrac)"
+	},
+	"Vector bold": {
+		"prefix": "vb",
+		"body": [
+			"\\mathbf{$1}"
+		],
+		"description": "Vector en negrita (mathbf)"
+	},
+	"Norm": {
+		"prefix": "norm",
+		"body": [
+			"\\lVert $1 \\rVert"
+		],
+		"description": "Norma ||·||"
+	},
+	"Set braces": {
+		"prefix": "set",
+		"body": [
+			"\\left\\lbrace $1 \\right\\rbrace"
+		],
+		"description": "Llaves escalables { ... }"
+	},
+	"Left right parentheses": {
+		"prefix": "par",
+		"body": [
+			"\\left( $1 \\right)"
+		],
+		"description": "Paréntesis escalables (left right)"
+	},
+	"Math inline": {
+		"prefix": "mi",
+		"body": [
+			"$$1$"
+		],
+		"description": "Modo matemático inline $...$"
+	},
+	"Math display": {
+		"prefix": "mm",
+		"body": [
+			"$$",
+			"$1",
+			"$$"
+		],
+		"description": "Modo matemático display $$...$$"
+	},
+	"Sqrt": {
+		"prefix": "sq",
+		"body": [
+			"\\sqrt{$1}"
+		],
+		"description": "Raíz cuadrada"
+	},
+	"Cases": {
+		"prefix": "cases",
+		"body": [
+			"\\begin{cases}",
+			"\t$1",
+			"\\end{cases}"
+		],
+		"description": "Entorno cases (funciones a trozos)"
+	},
+	"Integral": {
+		"prefix": "int",
+		"body": [
+			"\\int $1 \\, d$2"
+		],
+		"description": "Integral indefinida"
+	},
+	"Definite integral": {
+		"prefix": "dint",
+		"body": [
+			"\\int_{$1}^{$2} $3 \\, d$4"
+		],
+		"description": "Integral definida"
+	},
+	"Integral display": {
+		"prefix": "intd",
+		"body": [
+			"$$",
+			"\\int $1 \\, d$2",
+			"$$"
+		],
+		"description": "Integral en modo display"
+	},
+	"Definite integral display": {
+		"prefix": "dintd",
+		"body": [
+			"$$",
+			"\\int_{$1}^{$2} $3 \\, d$4",
+			"$$"
+		],
+		"description": "Integral definida en modo display"
+	},
+	"Double integral over set": {
+		"prefix": "iint",
+		"body": [
+			"\\iint_{$1} $2 \\, d$3"
+		],
+		"description": "Integral doble sobre un conjunto"
+	},
+	"Double integral over set display": {
+		"prefix": "iintd",
+		"body": [
+			"$$",
+			"\\iint_{$1} $2 \\, d$3",
+			"$$"
+		],
+		"description": "Integral doble sobre un conjunto en modo display"
+	},
+	"Double integral D dxdy": {
+		"prefix": "iintxy",
+		"body": [
+			"\\iint_{$1} $2 \\, dx\\,dy"
+		],
+		"description": "Integral doble sobre D con dx dy"
+	},
+	"Double integral change of variables": {
+		"prefix": "iintcv",
+		"body": [
+			"\\iint_{$1} $2 \\, \\lvert J \\rvert \\, d$3"
+		],
+		"description": "Integral doble con jacobiano"
+	},
+	"Integral over region": {
+		"prefix": "intD",
+		"body": [
+			"\\int_{$1} $2 \\, d$3 \\, d$4"
+		],
+		"description": "Integral sobre un dominio o región"
+	},
+	"Area functional": {
+		"prefix": "area",
+		"body": [
+			"\\mathcal{A}\\left($1\\right)"
+		],
+		"description": "Área de un conjunto o región"
+	},
+	"Length functional": {
+		"prefix": "len",
+		"body": [
+			"\\mathcal{L}\\left($1\\right)"
+		],
+		"description": "Longitud de una curva o conjunto"
+	},
+	"Red operator": {
+		"prefix": "red",
+		"body": [
+			"\\operatorname{red}\\left($1\\right)"
+		],
+		"description": "Operador red aplicado a un objeto"
+	}
+}
